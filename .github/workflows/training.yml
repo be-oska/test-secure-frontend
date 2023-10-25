@@ -21,7 +21,7 @@ jobs:
           with:
             runTests: false
         - run: npm install
-        - name: "UI Tests - Chrome"
+        - name: "UI Tests - ${{ matrix.ci_browser }}"
           uses: cypress-io/github-action@v6
           with:
             start: npm start
